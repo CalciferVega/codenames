@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 const Chrono = function(){
-    const [ourTime, getOurTime] = React.useState('');
+    const [ourTime, getOurTime] = useState('');
     let current = new Date();
     let timerNow = current.toLocaleTimeString();
 
