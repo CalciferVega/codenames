@@ -468,10 +468,16 @@ const setGame = function (n) {
   let gameSet = [];
   let words = getWords(n);
   let roles = getRole(n);
+  let starterTeam;
+  let validation = roles.filter(x => x == 'red').length;
+
+  validation === 9 ? starterTeam = 'red' : starterTeam = 'blue';
+
   for (let i = 0; i < words.length; i++) {
     let card = {
       'word' : `${words[i]}`,
-      'role' : `${roles[i]}` 
+      'role' : `${roles[i]}` ,
+      'starter' : `${starterTeam}`
     }
     gameSet.push(card);
   }

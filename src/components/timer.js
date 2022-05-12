@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Chrono = function(){
     const [ourTime, getOurTime] = useState('');
-    let current = new Date();
+    let current = new Date().now;
     let timerNow = current.toLocaleTimeString();
 
     
